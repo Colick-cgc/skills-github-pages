@@ -4,6 +4,7 @@ nav:
   - 首页: index.md
   - 第一部分:
       - Part1/index.md
+      - 随机文本: Part1/随笔.md
   - 第二部分:
       - Part2/index.md
   - 第三部分:
