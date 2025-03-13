@@ -1,18 +1,14 @@
-# Welcome to MkDocs
+# 欢迎光临陈光灿的网站
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).   
-这一次一定能成功
+以后我一定会在这里干出一番天地！  
+这一次一定能成功！
 
-## Commands
+## 哈哈哈哈哈哈
 这是一个新的开始
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+* 我要开始记录我的生活了！
+* 从哪里开始呢？
+* 开始！
 
-## Project layout
+## 哈哈哈哈哈哈
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+我的天
