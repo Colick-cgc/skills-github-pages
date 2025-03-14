@@ -20,6 +20,10 @@ theme:
     - search.share
     - navigation.top
     - navigation.indexes
+  markdown_extensions:
+    - admonition
+    - pymdownx.details
+    - pymdownx.superfences
 extra:
   social:
     - icon: fontawesome/brands/github
