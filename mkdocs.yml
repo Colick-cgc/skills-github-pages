@@ -20,3 +20,10 @@ theme:
     - search.share
     - navigation.top
     - navigation.indexes
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Colick-cgc
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:chen3242022@63.com
+copyright: Copyright &copy; 2024 - 2025 Can
