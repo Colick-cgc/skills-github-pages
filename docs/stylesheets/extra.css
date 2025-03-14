@@ -5,3 +5,13 @@
     width: 350px;   
     column-width: auto;
 }
+:root {
+    --md-text-font:  "LXGW WenKai Screen", sans-serif; 
+    /* --md-code-font:  */
+  }
+
+
+@font-face {    
+    font-family: 'LXGW';    
+    src: url('./LXGWWenKaiGBScreen.woff') format('woff');/*IE*/     
+}
