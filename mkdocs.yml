@@ -2,12 +2,12 @@ site_name: Can的站
 site_url: https://colick-cgc.github.io/skills-github-pages/
 nav:
   - 首页: index.md
-  - 第一部分:
+  - 文学:
       - Part1/index.md
       - 随机文本: Part1/随笔.md
-  - 第二部分:
+  - 历史:
       - Part2/index.md
-  - 第三部分:
+  - 数学:
       - Part3/index.md
 docs_dir: docs/
 
