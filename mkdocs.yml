@@ -1,4 +1,4 @@
-site_name: Can的站
+site_name: Karma的站
 site_url: https://colick-cgc.github.io/skills-github-pages/
 nav:
   - 首页: index.md
@@ -33,4 +33,4 @@ extra:
       link: https://github.com/Colick-cgc
     - icon: fontawesome/solid/paper-plane
       link: mailto:chen3242022@63.com
-copyright: Copyright &copy; 2024 - 2025 Can
+copyright: Copyright &copy; 2024 - 2025 Karma
