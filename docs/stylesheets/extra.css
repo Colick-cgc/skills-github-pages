@@ -1,18 +1,18 @@
-.md-grid {
-  max-width: 1280px !important;
+@media screen and (min-width: 768px) {
+    .md-typeset .admonition.inline {
+        float: left;
+        width: calc(50% - 1rem);
+        margin-right: 1rem;
+    }
 }
 
-.md-typeset .admonition.inline {
-    float: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin: 1em 0 !important;
+@media screen and (max-width: 767px) {
+    .md-typeset .admonition.inline {
+        width: 100%;
+        margin: 1rem 0;
+    }
 }
-
-.md-typeset .inline .admonition {
-    flex: 1 1 auto;
-    min-width: 300px;
-    max-width: 45%;
-    margin: 0 !important;
+.md-typeset details, .md-typeset .admonition {
+    margin: 1em 0;
+    break-inside: avoid;
 }
