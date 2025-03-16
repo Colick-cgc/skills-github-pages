@@ -24,6 +24,8 @@ theme:
     - admonition
     - pymdownx.details
     - pymdownx.superfences
+extra_css:
+  - stylesheets/extra.css
 extra:
   social:
     - icon: fontawesome/brands/github
