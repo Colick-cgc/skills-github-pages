@@ -24,9 +24,6 @@ theme:
     - admonition
     - pymdownx.details
     - pymdownx.superfences
- extra_css:
-    - stylesheets/extra.css
-    - https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
 extra:
   social:
     - icon: fontawesome/brands/github
