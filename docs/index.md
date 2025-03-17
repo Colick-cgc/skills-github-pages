@@ -1,13 +1,26 @@
-# 这是一个主页
-!!! info inline end "Lorem ipsum"
+# 我
+!!! info inline end "关于我"
 
-    Lorem ipsum dolor sit amet, consectetur
-    adipiscing elit. Nulla et euismod nulla.
-    Curabitur feugiat, tortor non consequat
-    finibus, justo purus auctor massa.
-!!! info inline end "Lorem ipsum"
+    :crystal_ball:当你打开这个网页，我们已在促膝长谈
+    :gift:这个网站是我送给自己的20岁生日礼物
+    :page_facing_up:KARMA —— 因果关系
+    :dvd:实际上是郑润泽的一首歌哈哈哈
+!!! info inline end "学校/专业/学习"
 
-    Lorem ipsum dolor sit amet, consectetur
-    adipiscing elit. Nulla et euismod nulla.
-    Curabitur feugiat, tortor non consequat
-    finibus, justo purus auctor massa.
+    :school:河南-开封-河南大学
+    :mortar_board:本科金融数学大三在读
+    :computer:微微喜欢编程:material-language-python: | :material-language-R:
+    :mag_right:理论学的很差，喜欢实践
+!!! info inline end "星座/MBTI/性格"
+
+    :aries:白羊座
+    :boy:ESFJ
+    :feet:性格一般
+    :cyclone:容易多愁善感
+!!! info inline end "晃晃悠悠"
+
+    :earth_africa:曾长居平顶山，现居开封
+    :airplane:喜欢旅游但没钱
+    > 试图努力赚钱，走遍祖国。
+
+
