@@ -20,10 +20,10 @@ theme:
     - search.share
     - navigation.top
     - navigation.indexes
-  markdown_extensions:
-    - admonition
-    - pymdownx.details
-    - pymdownx.superfences
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
 extra_css:
   - stylesheets/extra.css
 extra:
