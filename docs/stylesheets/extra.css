@@ -1,20 +1,6 @@
-@media screen and (min-width: 768px) {
-    .md-typeset .admonition.inline {
-        float: left;
-        width: calc(50% - 1rem);
-        margin-right: 1rem;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .md-typeset .admonition.inline {
-        width: 100%;
-        margin: 1rem 0;
-    }
-}
-.md-typeset details, .md-typeset .admonition {
-    margin: 1em 0;
-    break-inside: avoid;
+.md-typeset .admonition.inline {
+    width: 350px;   
+    column-width: auto;
 }
 :root {
     --md-text-font:  "LXGW WenKai Screen", sans-serif; 
