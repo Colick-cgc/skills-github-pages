@@ -1,3 +1,17 @@
+/* :root {
+    --md-text-font: "LXGW"; 
+}
+@font-face {  	
+    font-family: 'LXGW';  	
+    src: url('https://fastly.jsdelivr.net/gh/SmilingWayne/StaticResources@Fonts/fonts/LXGWWenKaiGBScreen.woff') format('woff');
+} */
+
+
+:root {
+    --md-text-font:  "LXGW WenKai Screen", sans-serif; 
+    /* --md-code-font:  */
+  }
+
 .md-typeset .admonition,
 .md-typeset details {
     font-size: 15px
@@ -18,13 +32,29 @@
     column-width: auto;
     font-size: 15px;
 }
-:root {
-    --md-text-font:  "LXGW WenKai Screen", sans-serif; 
-    /* --md-code-font:  */
-  }
 
 
-@font-face {    
-    font-family: 'LXGW';    
-    src: url('./LXGWWenKaiGBScreen.woff') format('woff');/*IE*/     
+
+/* 
+@font-face {
+    font-display: auto;
+    font-family: ShouJin;
+    src: url(font/ShouJin.ttf)
 }
+
+
+@font-face {
+    font-display: auto;
+    font-family: XingKai;
+    src: url(font/XingKai.ttf) 
+}
+
+
+
+@font-face {
+    font-display: auto;
+    font-family: FanKai;
+    src: url(font/FanKai.ttf)
+}
+
+ */
