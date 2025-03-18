@@ -8,4 +8,4 @@
 
 
 [^1]: 出自战国·屈原《[楚辞·九歌·东君](https://baike.baidu.com/item/九歌·东君/699350)》。
-[^2]: A Professor Emerita of Nankai University. (From [Wiki](https://en.wikipedia.org/wiki/Chia-ying_Yeh)
+[^2]: A Professor Emerita of Nankai University. (From [Wiki](https://en.wikipedia.org/wiki/Chia-ying_Yeh))
