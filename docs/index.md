@@ -28,6 +28,10 @@
     > 试图努力赚钱，走遍祖国。
 
 
+<center>
+    <font face = "Apple chancery" size = 7>Bienvenue sur mon site! 🌼</font>
+</center>
+
 - 💻 PC端：点击顶部导航栏选择主题，左侧查看目录；
 - 📱 移动端：点击左上角图标选择内容；
 - 🔍 搜索：支持中文检索。
