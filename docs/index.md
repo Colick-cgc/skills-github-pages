@@ -28,7 +28,7 @@
     > 试图努力赚钱，走遍祖国。
 
 
-<center> <font face = "Apple chancery" size = 5>Happy every day ! 🌼</font></center>
+<center> Happy every day ! 🌼</center>
 
 - 💻 PC端：点击顶部导航栏选择主题，左侧查看目录；
 - 📱 移动端：点击左上角图标选择内容；
