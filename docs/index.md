@@ -29,7 +29,7 @@
 
 
 <center>
-    <font face = "Apple chancery" size = 7>Bienvenue sur mon site! 🌼</font>
+    <font face = "Apple chancery" size = 5>Bienvenue sur mon site! 🌼</font>
 </center>
 
 - 💻 PC端：点击顶部导航栏选择主题，左侧查看目录；
