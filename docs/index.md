@@ -1,4 +1,5 @@
 # (⊙ᗜ⊙)
+
 !!! note inline "关于我"
 
     :crystal_ball: 当你打开这个网页，我们已在促膝长谈  
@@ -27,4 +28,40 @@
     > 试图努力赚钱，走遍祖国。
 
 
+<center> <font face = "Apple chancery" size = 5>Happy every day ! 🌼</font></center>
 
+- 💻 PC端：点击顶部导航栏选择主题，左侧查看目录；
+- 📱 移动端：点击左上角图标选择内容；
+- 🔍 搜索：支持中文检索。
+
+
+<script>
+function updateTime() {
+    var date = new Date();
+    var now = date.getTime();
+    var startDate = new Date("2022/12/29 09:10:12");
+    var start = startDate.getTime();
+    var diff = now - start;
+    var y, d, h, m;
+    y = Math.floor(diff / (365 * 24 * 3600 * 1000));
+    diff -= y * 365 * 24 * 3600 * 1000;
+    d = Math.floor(diff / (24 * 3600 * 1000));
+    h = Math.floor(diff / (3600 * 1000) % 24);
+    m = Math.floor(diff / (60 * 1000) % 60);
+    if (y == 0) {
+        document.getElementById("web-time").innerHTML = d + "<span class=\"heti-spacing\"> </span>天<span class=\"heti-spacing\"> </span>" + h + "<span class=\"heti-spacing\"> </span>小时<span class=\"heti-spacing\"> </span>" + m + "<span class=\"heti-spacing\"> </span>分钟";
+    } else {
+        document.getElementById("web-time").innerHTML = y + "<span class=\"heti-spacing\"> </span>年<span class=\"heti-spacing\"> </span>" + d + "<span class=\"heti-spacing\"> </span>天<span class=\"heti-spacing\"> </span>" + h + "<span class=\"heti-spacing\"> </span>小时<span class=\"heti-spacing\"> </span>" + m + "<span class=\"heti-spacing\"> </span>分钟";
+    }
+    setTimeout(updateTime, 1000 * 60);
+}
+updateTime();
+function toggle_statistics() {
+    var statistics = document.getElementById("statistics");
+    if (statistics.style.opacity == 0) {
+        statistics.style.opacity = 1;
+    } else {
+        statistics.style.opacity = 0;
+    }
+}
+</script>
