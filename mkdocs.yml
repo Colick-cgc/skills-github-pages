@@ -9,6 +9,7 @@ nav:
       - Part2/index.md
   - 乱七八糟:
       - Part3/index.md
+      - Part3/乱七八糟的情绪日记.md
 docs_dir: docs/
 
 theme:
