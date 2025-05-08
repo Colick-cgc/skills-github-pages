@@ -1,4 +1,4 @@
-# 祝陈光灿20岁生日快乐！（KARMA的站）
+# KARMA的站
 
 !!! note inline "关于我"
 
