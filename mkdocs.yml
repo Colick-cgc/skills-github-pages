@@ -5,9 +5,9 @@ nav:
   - 文学:
       - Part1/index.md
       - 罗生门: Part1/随笔.md
-  - 历史:
+  - 比赛:
       - Part2/index.md
-  - 数学:
+  - 乱七八糟:
       - Part3/index.md
 docs_dir: docs/
 
