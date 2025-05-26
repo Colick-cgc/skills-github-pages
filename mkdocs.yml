@@ -10,6 +10,7 @@ nav:
   - 乱七八糟:
       - Part3/index.md
       - 一封信: Part3/A letter.md
+      - 随记1: Part3/Beats.md
 docs_dir: docs/
 
 theme:
