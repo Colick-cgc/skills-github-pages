@@ -10,8 +10,8 @@
 !!! note inline "学校/专业/学习"
 
     :school: 河南-开封-河南大学  
-    :mortar_board: 本科金融数学大三在读  
-    :computer: 微微喜欢编程:material-language-python: | :material-language-java:  
+    :mortar_board: 本科金融数学大四在读  
+    :computer: 微微喜欢编程
     :mag_right: 理论学的很差，喜欢实践  
     
 !!! success inline "星座/MBTI/性格"
