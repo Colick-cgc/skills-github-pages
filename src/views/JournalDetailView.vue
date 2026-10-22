@@ -4,6 +4,7 @@ import { useRoute } from 'vue-router'
 import { motion } from 'motion-v'
 import TagBadge from '@/components/TagBadge.vue'
 import { formatDate } from '@/utils/format.js'
+import { asset } from '@/utils/asset.js'
 import journal from '@/data/journal.json'
 
 const route = useRoute()
@@ -35,6 +36,10 @@ const paragraphs = computed(() => (entry.value?.content || '').split('\n\n').fil
           <TagBadge v-for="t in entry.tags" :key="t" :label="t" />
         </div>
       </header>
+
+      <div v-if="entry.image" class="img-frame mt-8 aspect-[16/9]">
+        <img :src="asset(entry.image)" :alt="entry.title" />
+      </div>
 
       <div class="mt-10 flex flex-col gap-6">
         <motion.p

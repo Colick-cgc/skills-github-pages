@@ -38,6 +38,10 @@ function stars(n) {
       subtitle="读过的书、看过的片，以及它们留下的痕迹。"
     />
 
+    <div class="mt-6 flex justify-end">
+      <router-link to="/admin?new=reading" class="pill-btn">＋ 新增</router-link>
+    </div>
+
     <!-- 横向分类切换 -->
     <div class="mt-10 inline-flex rounded-full border border-border bg-surface p-1">
       <button

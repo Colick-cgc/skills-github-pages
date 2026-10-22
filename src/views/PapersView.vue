@@ -59,6 +59,10 @@ function noteSections(p) {
       subtitle="记录读过的论文：核心问题、方法、我的理解、疑问与后续计划。"
     />
 
+    <div class="mt-6 flex justify-end">
+      <router-link to="/admin?new=papers" class="pill-btn">＋ 新增论文</router-link>
+    </div>
+
     <!-- 搜索框 + 标签筛选 -->
     <div class="mt-10">
       <input

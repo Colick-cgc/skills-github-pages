@@ -45,6 +45,10 @@ function toggleTag(t) {
       subtitle="私人日常、情绪与生活碎片。没有分享按钮，只有自己。"
     />
 
+    <div class="mt-6 flex justify-end">
+      <router-link to="/admin?new=journal" class="pill-btn">＋ 写日记</router-link>
+    </div>
+
     <!-- 标签筛选 -->
     <div v-if="allTags.length" class="mt-8 flex flex-wrap gap-2">
       <button

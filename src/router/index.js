@@ -54,6 +54,12 @@ const routes = [
     component: () => import('@/views/AboutView.vue'),
     meta: { title: '关于' },
   },
+  {
+    path: '/admin',
+    name: 'admin',
+    component: () => import('@/views/AdminView.vue'),
+    meta: { title: '内容管理' },
+  },
   // 未知路径一律回首页
   { path: '/:pathMatch(.*)*', redirect: '/' },
 ]

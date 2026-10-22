@@ -26,6 +26,10 @@ const places = computed(() => {
       subtitle="走过的路、看过的风景，和那些还想再去的地方。"
     />
 
+    <div class="mt-6 flex justify-end">
+      <router-link to="/admin?new=travel" class="pill-btn">＋ 新增旅行</router-link>
+    </div>
+
     <!-- 地图式地点标签（非真实地图） -->
     <div v-if="places.length" class="mt-8 flex flex-wrap gap-2">
       <span
