@@ -1,0 +1,278 @@
+/* ==========================================================================
+   KARMA 的站 · 全局样式
+   --------------------------------------------------------------------------
+   · Tailwind v4（CSS-first，无需 tailwind.config.js / postcss.config.js）
+   · 深色为默认：<html> 默认带 .dark 类；去掉 .dark 即切回浅色
+   · 配色：冷白 / 石墨灰 / 深蓝黑 + 少量蓝色强调（接近苹果官网）
+   · 所有颜色走「语义化 CSS 变量」，切换主题只需翻转 .dark 类
+   ========================================================================== */
+
+@import "tailwindcss";
+
+/* 让 dark: 变体由 <html> 上的 .dark 类驱动（而不是系统偏好） */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---------- 设计令牌：把语义变量映射成 Tailwind 颜色工具类 ----------
+   之后可直接写 bg-bg / bg-surface / text-primary / text-secondary /
+   border-border / text-accent / bg-accent-soft 等。 */
+@theme {
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+    "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    Arial, sans-serif;
+
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-primary: var(--text-primary);
+  --color-secondary: var(--text-secondary);
+  --color-muted: var(--text-muted);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+}
+
+/* ---------- 浅色模式 ---------- */
+:root {
+  --bg: #f5f5f7;
+  --surface: #ffffff;
+  --surface-2: #fbfbfd;
+  --text-primary: #1d1d1f;
+  --text-secondary: #6e6e73;
+  --text-muted: #86868b;
+  --border: rgba(0, 0, 0, 0.08);
+  --border-strong: rgba(0, 0, 0, 0.16);
+  --accent: #0071e3;
+  --accent-soft: rgba(0, 113, 227, 0.10);
+  --glass: rgba(255, 255, 255, 0.72);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04), 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.12);
+  color-scheme: light;
+}
+
+/* ---------- 深色模式（默认） ---------- */
+.dark {
+  --bg: #0b0d10;
+  --surface: #14171b;
+  --surface-2: #1a1d22;
+  --text-primary: #f5f5f7;
+  --text-secondary: #a1a1a6;
+  --text-muted: #6e6e73;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.18);
+  --accent: #2997ff;
+  --accent-soft: rgba(41, 151, 255, 0.14);
+  --glass: rgba(11, 13, 16, 0.72);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4), 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5), 0 2px 6px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.6);
+  color-scheme: dark;
+}
+
+/* ---------- 基础 ---------- */
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background-color: var(--bg);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.65;
+  }
+  ::selection {
+    background: var(--accent-soft);
+    color: var(--text-primary);
+  }
+  /* 细滚动条，接近 macOS 观感 */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--border-strong);
+    border-radius: 999px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+    background-clip: content-box;
+  }
+}
+
+/* ---------- 复用组件类 ---------- */
+@layer components {
+  /* 磨砂玻璃（导航滚动后使用） */
+  .glass {
+    background: var(--glass);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+  }
+
+  /* 卡片：圆角 + 柔和阴影 + 细边框 */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 0.35s ease;
+  }
+  /* 卡片 hover：轻微上浮 + 阴影加深 + 边缘高亮（蓝色细描边） */
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--accent-soft);
+  }
+
+  /* 标签胶囊 */
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.2rem 0.7rem;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    border-radius: 999px;
+    color: var(--text-secondary);
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  }
+  .chip.is-active {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--accent-soft);
+  }
+
+  /* 导航下划线链接 */
+  .nav-link {
+    position: relative;
+    color: var(--text-secondary);
+    transition: color 0.25s ease, opacity 0.25s ease;
+  }
+  .nav-link:hover {
+    color: var(--text-primary);
+    opacity: 0.9;
+  }
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: -4px;
+    height: 1.5px;
+    background: var(--accent);
+    transition: right 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .nav-link:hover::after,
+  .nav-link.router-link-active::after {
+    right: 0;
+  }
+  .nav-link.router-link-active {
+    color: var(--text-primary);
+  }
+
+  /* 首页胶囊按钮：细边框 + 轻微发光（hover 时） */
+  .pill-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.55rem 1.35rem;
+    border-radius: 999px;
+    border: 1px solid var(--border-strong);
+    color: var(--text-primary);
+    background: transparent;
+    font-size: 0.9rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease,
+      background 0.3s ease, transform 0.3s ease;
+  }
+  .pill-btn:hover {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+    box-shadow: 0 0 0 1px var(--accent-soft), 0 0 24px var(--accent-soft);
+    transform: translateY(-1px);
+  }
+
+  /* 图片容器：裁剪圆角 + 悬停缓慢缩放 */
+  .img-frame {
+    overflow: hidden;
+    border-radius: 16px;
+    background: var(--surface-2);
+  }
+  .img-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .img-frame:hover img {
+    transform: scale(1.05);
+  }
+}
+
+/* ---------- 关键帧 ---------- */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+/* 图片缓慢放大（Ken Burns，用于详情页首图） */
+@keyframes kenburns {
+  from { transform: scale(1); }
+  to { transform: scale(1.06); }
+}
+
+/* 打字光标 */
+.type-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  margin-left: 3px;
+  background: var(--accent);
+  vertical-align: -0.12em;
+  animation: blink 1s steps(1) infinite;
+}
+
+/* ---------- 路由切换 cross-fade（Vue 内置 <Transition name="page">） ---------- */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+.page-enter-from {
+  opacity: 0;
+  transform: translateY(8px);
+}
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+/* ---------- 移动端菜单展开 ---------- */
+.menu-enter-active,
+.menu-leave-active {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.menu-enter-from,
+.menu-leave-to {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+/* ---------- 卡片展开（论文研读的折叠笔记） ---------- */
+.expand-enter-active,
+.expand-leave-active {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.expand-enter-from,
+.expand-leave-to {
+  opacity: 0;
+  transform: translateY(-6px);
+}

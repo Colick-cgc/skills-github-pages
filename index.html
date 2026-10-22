@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="%BASE_URL%favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="KARMA 的个人记录站 —— 论文研读、随笔日记、读书观影、旅行回忆" />
+    <meta name="theme-color" content="#0b0d10" />
+    <title>KARMA 的站</title>
+    <!-- 在 Vue 挂载前就应用主题，避免深色/浅色切换闪白 -->
+    <script>
+      ;(function () {
+        try {
+          if (localStorage.getItem('karma-theme') === 'light') {
+            document.documentElement.classList.remove('dark')
+          }
+        } catch (e) {
+          /* 隐私模式等场景 localStorage 不可用，保持默认深色 */
+        }
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

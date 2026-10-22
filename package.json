@@ -1,0 +1,25 @@
+{
+  "name": "karma-site",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "KARMA 的个人记录站 — 论文研读 / 随笔日记 / 读书观影 / 旅行回忆",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tsparticles/slim": "^4.4.0",
+    "@tsparticles/vue3": "^4.4.0",
+    "motion-v": "^2.8.0",
+    "vue": "^3.5.44",
+    "vue-router": "^5.4.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@vitejs/plugin-vue": "^6.0.10",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.3.5"
+  }
+}

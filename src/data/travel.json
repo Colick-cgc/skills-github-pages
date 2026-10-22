@@ -1,0 +1,11 @@
+[
+  {
+    "id": "t001",
+    "title": "（示例）城市漫步",
+    "location": "河南 · 开封",
+    "date": "2026-09-30",
+    "tags": ["旅行"],
+    "text": "这是一条示例游记。把照片放进 public/images/travel/ 文件夹，再在这里把 images 字段换成真实文件名即可。",
+    "images": ["images/travel/placeholder-1.svg", "images/travel/placeholder-2.svg"]
+  }
+]

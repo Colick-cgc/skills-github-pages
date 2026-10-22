@@ -1,0 +1,28 @@
+{
+  "siteName": "KARMA 的站",
+  "author": "KARMA",
+  "hero": {
+    "eyebrow": "Bienvenue sur mon site",
+    "tagline": "记录 · 思考 · 生长",
+    "subtitle": "论文研读、随笔日记、读书观影与旅行回忆，一个只属于我的安静角落。"
+  },
+  "nav": [
+    { "label": "首页", "to": "/" },
+    { "label": "论文研读", "to": "/papers" },
+    { "label": "随笔日记", "to": "/journal" },
+    { "label": "读书与观影", "to": "/reading" },
+    { "label": "旅行回忆", "to": "/travel" },
+    { "label": "关于", "to": "/about" }
+  ],
+  "nowLearning": {
+    "title": "继续学习",
+    "topic": "低空物流 · 气象韧性路径鲁棒优化",
+    "items": [
+      "生成式风场建模（TKE 联合生成 / 保形校准）",
+      "空间相关风场下的路径级 CVaR 鲁棒优化",
+      "陆空联运（厦门三区）路径规划"
+    ],
+    "note": "近期在啃风场不确定性与鲁棒优化的文献，推进比较慢，慢慢来。"
+  },
+  "footer": "Copyright © 2024–2026 KARMA"
+}
