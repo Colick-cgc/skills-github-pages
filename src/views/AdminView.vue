@@ -89,6 +89,24 @@ function closeEditor() {
   editing.value = null
 }
 
+// 写入 JSON：读最新 sha → 修改 → 提交；遇到 sha 冲突（422）自动重读重试
+async function commitJson(type, mutate, message) {
+  const t = TYPES.find((x) => x.key === type)
+  let lastErr
+  for (let attempt = 0; attempt < 3; attempt++) {
+    const { data: arr, sha } = await readJson(t.path)
+    const next = mutate(arr)
+    try {
+      return await writeFile(t.path, JSON.stringify(next, null, 2), sha, message)
+    } catch (e) {
+      lastErr = e
+      if (e.status === 422) continue // sha 对不上，重读重试
+      throw e
+    }
+  }
+  throw lastErr
+}
+
 async function onSave({ type, data, uploads }) {
   saving.value = true
   error.value = ''
@@ -100,12 +118,15 @@ async function onSave({ type, data, uploads }) {
       if (type === 'journal') data.image = u.jsonPath
       else data.images.push(u.jsonPath)
     }
-    // 2. 重新读取最新内容与 sha，避免覆盖他人/上次修改
-    const t = TYPES.find((x) => x.key === type)
-    const { data: arr, sha } = await readJson(t.path)
-    const idx = arr.findIndex((x) => x.id === data.id)
-    const next = idx >= 0 ? arr.map((x, i) => (i === idx ? data : x)) : [...arr, data]
-    await writeFile(t.path, JSON.stringify(next, null, 2), sha, `update ${type}: ${data.title}`)
+    // 2. 写入 JSON（带 sha 冲突重试）
+    await commitJson(
+      type,
+      (arr) => {
+        const idx = arr.findIndex((x) => x.id === data.id)
+        return idx >= 0 ? arr.map((x, i) => (i === idx ? data : x)) : [...arr, data]
+      },
+      `update ${type}: ${data.title}`,
+    )
     notice.value = '✅ 已保存！GitHub 正在自动重新部署，约 1–2 分钟后上线。'
     closeEditor()
     await load()
@@ -118,13 +139,14 @@ async function onSave({ type, data, uploads }) {
 
 async function onDelete(item) {
   if (!window.confirm(`确定删除「${item.title}」？此操作会提交到仓库。`)) return
-  const t = currentType()
   error.value = ''
   notice.value = ''
   try {
-    const { data: arr, sha } = await readJson(t.path)
-    const next = arr.filter((x) => x.id !== item.id)
-    await writeFile(t.path, JSON.stringify(next, null, 2), sha, `delete ${active.value}: ${item.title}`)
+    await commitJson(
+      active.value,
+      (arr) => arr.filter((x) => x.id !== item.id),
+      `delete ${active.value}: ${item.title}`,
+    )
     notice.value = '已删除，正在重新部署…'
     await load()
   } catch (e) {

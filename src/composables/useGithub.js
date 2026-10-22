@@ -61,6 +61,7 @@ async function api(path, options = {}) {
   }
   if (options.body) headers['Content-Type'] = 'application/json'
   const res = await fetch(API + path, {
+    cache: 'no-store',
     ...options,
     headers: { ...headers, ...options.headers },
   })
