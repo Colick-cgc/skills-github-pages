@@ -41,8 +41,8 @@ const statusTone = (s) =>
       <SectionHeader
         index="01"
         eyebrow="Daily Study"
-        title="两周读完一篇，读完就收纳"
-        lead="从导师给的论文里只挑一篇精读，配一两篇外部阅读；第一周周日下午收纳，第二周深化、复现、准备组会。不追数量，追读懂。"
+        title="论文精读的两周循环"
+        lead="从导师给的论文里只挑一篇精读，配一两篇外部阅读；第一周周日下午收纳，第二周深化、复现、准备组会。"
       >
         <div class="mt-8 flex flex-wrap items-center gap-2">
           <span class="chip">第 {{ research.current.round }} 轮</span>

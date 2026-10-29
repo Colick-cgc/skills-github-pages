@@ -1,29 +1,29 @@
 <!doctype html>
-<html lang="zh-CN" class="dark">
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="KARMA 的个人主页 —— 论文精读节奏、数据分析实习计划与项目作品展示"
+      content="KARMA 的个人学习站 —— 论文精读节奏、数据分析实习计划与项目作品"
     />
-    <meta name="theme-color" content="#07080b" />
-    <meta property="og:title" content="KARMA · 论文、数据与作品" />
+    <meta name="theme-color" content="#f7f6f3" />
+    <meta property="og:title" content="KARMA · 学习记录" />
     <meta
       property="og:description"
-      content="两周一循环读论文，十二周准备数据分析实习；这里放节奏、计划和作品。"
+      content="论文精读的两周循环、数据分析实习的十二周准备，以及做过的项目。"
     />
     <title>KARMA</title>
-    <!-- 在 Vue 挂载前就应用主题，避免深色/浅色切换闪白 -->
+    <!-- 在 Vue 挂载前就应用主题，避免深色/浅色切换闪白（默认亮色） -->
     <script>
       ;(function () {
         try {
-          if (localStorage.getItem('karma-theme') === 'light') {
-            document.documentElement.classList.remove('dark')
+          if (localStorage.getItem('karma-theme') === 'dark') {
+            document.documentElement.classList.add('dark')
           }
         } catch (e) {
-          /* 隐私模式等场景 localStorage 不可用，保持默认深色 */
+          /* 隐私模式等场景 localStorage 不可用，保持默认亮色 */
         }
       })()
     </script>

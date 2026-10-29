@@ -3,9 +3,9 @@
   "author": "陈光灿",
   "role": "研究生 · 金融数学 / 运筹优化",
   "hero": {
-    "eyebrow": "RESEARCH · DATA · 求职中",
-    "titleLines": ["把论文读透，", "把数据讲清楚。"],
-    "subtitle": "研究生在读，做低空物流与气象韧性的路径鲁棒优化；同时补 SQL、Pandas、Excel，准备数据分析实习。这里放我的一整套节奏、计划和作品。",
+    "eyebrow": "PAPER · DATA · LEARNING",
+    "titleLines": ["读论文，学数据"],
+    "subtitle": "研究生在读，做低空物流与气象韧性的路径鲁棒优化；同时在补 SQL、Pandas 和 Excel，准备数据分析实习。这里记录读过的论文、学过的技能和做过的项目。",
     "primary": { "label": "学习节奏", "to": "/research" },
     "secondary": { "label": "实习计划", "to": "/internship" },
     "facts": [
@@ -22,5 +22,5 @@
     { "label": "记录", "to": "/records" },
     { "label": "关于", "to": "/about" }
   ],
-  "footer": "KARMA · 用两周一循环读论文，用十二周准备第一份数据分析实习"
+  "footer": "KARMA · 论文、数据与实习准备的记录"
 }

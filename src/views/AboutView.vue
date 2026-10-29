@@ -21,12 +21,7 @@ const boards = [
 <template>
   <div>
     <div class="mx-auto max-w-[1180px] px-5 pb-8 pt-28 sm:px-8 sm:pt-36">
-      <SectionHeader
-        index="05"
-        eyebrow="About"
-        title="边读论文，边补数据"
-        :lead="profile.intro"
-      />
+      <SectionHeader index="05" eyebrow="About" title="关于我" :lead="profile.intro" />
 
       <div class="mt-14 grid gap-5 lg:grid-cols-[0.92fr_1.08fr]">
         <!-- 左：身份 + 基本信息 -->

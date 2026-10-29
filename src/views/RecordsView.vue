@@ -41,8 +41,8 @@ const groups = [
       <SectionHeader
         index="04"
         eyebrow="Records"
-        title="学习之外，也记一点生活"
-        lead="论文、实习、项目之外的部分都放在这里。它们不帮我找到工作，但能证明我还在好好生活。"
+        title="生活记录"
+        lead="论文、实习、项目之外的部分都在这里：随笔、读过的书、看过的片，和去过的地方。"
       />
 
       <div class="mt-14 grid gap-4 md:grid-cols-3">

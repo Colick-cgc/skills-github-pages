@@ -46,7 +46,7 @@ const boards = computed(() => [
     to: '/research',
     theme: 'board-learn',
     label: '日常学习',
-    title: '两周一循环读论文',
+    title: '两周一循环的精读',
     desc: '只有一个精读论文，配少量外部阅读；周日下午收纳，第二周准备组会和最小复现。',
     metrics: [
       { k: '当前阶段', v: `${phase.value.key} · ${phase.value.name}` },
@@ -58,7 +58,7 @@ const boards = computed(() => [
     to: '/internship',
     theme: 'board-career',
     label: '实习计划',
-    title: '十二周准备数据分析实习',
+    title: '十二周的数据分析准备',
     desc: 'SQL、Pandas、Excel 三线并进，两个项目做完上线，第 5 周开始投递。',
     metrics: [
       { k: '当前进度', v: `第 ${weekNo.value} / ${internship.positioning.weeks} 周` },
@@ -70,7 +70,7 @@ const boards = computed(() => [
     to: '/projects',
     theme: 'board-build',
     label: '项目展示',
-    title: '照着三个仓库做作品',
+    title: '三个参考项目',
     desc: '从零售看板到用户分层，只模仿结构和叙事，不复刻每一行代码。',
     metrics: [
       { k: '参考仓库', v: `${projects.references.length} 个` },
@@ -238,10 +238,10 @@ const feed = computed(() => {
       <div class="flex items-end justify-between gap-6">
         <div>
           <p class="mono-label">01 — Boards</p>
-          <h2 class="mt-2 text-xl font-semibold tracking-tight">三块内容，一条主线</h2>
+          <h2 class="mt-2 text-xl font-semibold tracking-tight">三个板块</h2>
         </div>
         <p class="hidden max-w-[280px] text-right text-[12px] leading-relaxed text-muted sm:block">
-          读论文是为了毕业，学数据是为了第一份实习，做项目是把两边都讲清楚。
+          论文是毕业的事，数据是实习的事，项目把两边串起来。
         </p>
       </div>
 
@@ -302,7 +302,7 @@ const feed = computed(() => {
       <div class="flex items-end justify-between gap-6">
         <div>
           <p class="mono-label">02 — This Week</p>
-          <h2 class="mt-2 text-xl font-semibold tracking-tight">这周只做这几件</h2>
+          <h2 class="mt-2 text-xl font-semibold tracking-tight">本周任务</h2>
         </div>
         <p class="hidden text-[12px] text-muted sm:block">任务多了就都不做，先保这两列的前三条。</p>
       </div>
@@ -368,7 +368,7 @@ const feed = computed(() => {
       <div class="flex items-end justify-between gap-6">
         <div>
           <p class="mono-label">03 — Records</p>
-          <h2 class="mt-2 text-xl font-semibold tracking-tight">最近写下的</h2>
+          <h2 class="mt-2 text-xl font-semibold tracking-tight">最近记录</h2>
         </div>
         <router-link to="/records" class="mono text-[11px] text-accent hover:underline">
           全部记录 →

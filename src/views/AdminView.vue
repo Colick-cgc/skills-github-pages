@@ -206,7 +206,7 @@ onMounted(async () => {
         创建令牌：GitHub → Settings → Developer settings → Personal access tokens →
         <a href="https://github.com/settings/tokens?type=beta" target="_blank" rel="noopener" class="text-accent underline">Fine-grained tokens</a>
       </p>
-      <p v-if="error" class="mt-3 text-sm text-red-400">{{ error }}</p>
+      <p v-if="error" class="mt-3 text-sm text-red-600 dark:text-red-400">{{ error }}</p>
     </div>
 
     <!-- 已登录 -->
@@ -232,7 +232,7 @@ onMounted(async () => {
         </button>
       </div>
 
-      <div v-if="error" class="mt-4 rounded-xl bg-red-500/10 p-3 text-sm text-red-400">{{ error }}</div>
+      <div v-if="error" class="mt-4 rounded-xl bg-red-500/10 p-3 text-sm text-red-600 dark:text-red-400">{{ error }}</div>
       <div v-if="notice" class="mt-4 rounded-xl bg-accent-soft p-3 text-sm text-accent">{{ notice }}</div>
 
       <!-- 列表 -->
@@ -249,7 +249,7 @@ onMounted(async () => {
           </div>
           <div class="flex shrink-0 gap-2">
             <button class="text-sm text-accent hover:underline" @click="openEdit(item)">编辑</button>
-            <button class="text-sm text-red-400 hover:underline" @click="onDelete(item)">删除</button>
+            <button class="text-sm text-red-600 dark:text-red-400 hover:underline" @click="onDelete(item)">删除</button>
           </div>
         </div>
         <p v-if="!loading && !items.length" class="py-8 text-center text-sm text-muted">暂无内容</p>

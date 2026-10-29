@@ -37,7 +37,7 @@ const currentWeekData = computed(
       <SectionHeader
         index="02"
         eyebrow="Internship"
-        title="十二周，把学过的东西变成能投的简历"
+        title="数据分析实习的十二周准备"
         lead="科研不停，每周只拿 9–12 小时准备实习：SQL 和 Excel 先补硬技能，Pandas 够用就行，然后做项目、写简历、第 5 周开始投。"
       >
         <div class="mt-8 flex flex-wrap items-center gap-2">

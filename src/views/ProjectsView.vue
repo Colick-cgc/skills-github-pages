@@ -13,8 +13,8 @@ const refs = [...data.references].sort((a, b) => a.order - b.order)
       <SectionHeader
         index="03"
         eyebrow="Portfolio"
-        title="照着三个仓库做，但只做能讲清的部分"
-        lead="参考结构、参考叙事，不复刻每一行代码。第一个项目是从数据分析实习面试最常问的那条链路开始的：清洗 → SQL → 仪表板 → 结论。"
+        title="我的项目"
+        lead="参考结构、参考叙事，不复刻每一行代码。第一个项目从数据分析实习面试最常问的那条链路开始：清洗 → SQL → 仪表板 → 结论。"
       >
         <div class="mt-8 flex flex-wrap items-center gap-2">
           <span class="chip">参考仓库 {{ refs.length }}</span>
