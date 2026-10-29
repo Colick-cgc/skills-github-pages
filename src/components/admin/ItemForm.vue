@@ -332,7 +332,7 @@ function onSubmit() {
           取消
         </button>
         <button
-          class="rounded-xl bg-accent px-5 py-2 text-sm font-medium text-white transition hover:opacity-90"
+          class="rounded-xl bg-accent px-5 py-2 text-sm font-medium text-[color:var(--on-accent)] transition hover:opacity-90"
           @click="onSubmit"
         >
           保存

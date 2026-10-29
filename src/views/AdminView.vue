@@ -198,7 +198,7 @@ onMounted(async () => {
           placeholder="粘贴 ghp_ 或 github_pat_ 开头的令牌"
           @keyup.enter="doLogin"
         />
-        <button class="rounded-xl bg-accent px-5 py-2 text-sm font-medium text-white" :disabled="busy" @click="doLogin">
+        <button class="rounded-xl bg-accent px-5 py-2 text-sm font-medium text-[color:var(--on-accent)]" :disabled="busy" @click="doLogin">
           {{ busy ? '验证中…' : '登录' }}
         </button>
       </div>
@@ -225,7 +225,7 @@ onMounted(async () => {
           v-for="t in TYPES"
           :key="t.key"
           class="rounded-full px-4 py-1.5 text-sm transition"
-          :class="active === t.key ? 'bg-accent text-white' : 'bg-surface-2 text-secondary hover:text-primary'"
+          :class="active === t.key ? 'bg-accent text-[color:var(--on-accent)]' : 'bg-surface-2 text-secondary hover:text-primary'"
           @click="active = t.key"
         >
           {{ t.label }}

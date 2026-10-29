@@ -1,0 +1,139 @@
+{
+  "positioning": {
+    "summary": "三个参考仓库，一条从模仿到独立完成的路：先把第一个做完上线，再看第二个补 SQL，最后拿第三个当成品参考。",
+    "target": "数据分析实习 · 作品集"
+  },
+  "standard": {
+    "title": "一个能拿出去的项目 = 四样东西",
+    "items": [
+      { "name": "能跑", "desc": "一条命令或一个 notebook，从原始数据到结论能跑通。" },
+      { "name": "能看", "desc": "至少一页仪表板截图 + 核心指标，别人 10 秒能看懂。" },
+      { "name": "能讲", "desc": "3 个业务结论，每个都有数据支撑和一句行动建议。" },
+      { "name": "能查", "desc": "README 写清数据来源、字段口径、结论和局限。" }
+    ],
+    "structure": [
+      "retail-analytics/",
+      "├─ data/",
+      "│  ├─ raw/           # 原始数据，不改",
+      "│  └─ processed/     # 清洗后",
+      "├─ notebooks/",
+      "│  └─ 01_clean.ipynb",
+      "├─ sql/",
+      "│  ├─ 01_sales_trend.sql",
+      "│  └─ 02_region_product.sql",
+      "├─ dashboard/",
+      "│  └─ retail.twbx",
+      "├─ reports/",
+      "│  └─ findings.md    # 3 条结论 + 数据支撑",
+      "└─ README.md"
+    ]
+  },
+  "references": [
+    {
+      "id": "ref-1",
+      "order": 1,
+      "name": "Retail Analytics Dashboard",
+      "author": "chaurasiaakrish",
+      "url": "https://github.com/chaurasiaakrish/Retail-Analytics-Dashboard",
+      "difficulty": "低 — 中",
+      "level": 1,
+      "stage": "第一阶段 · 第一个项目",
+      "stack": ["Python", "Pandas", "SQL", "Tableau"],
+      "why": "分析流程最干净：Python 清洗 → SQL 业务分析 → Tableau 仪表板。正好是数据分析实习面试里最常被追问的一条链路。",
+      "imitate": [
+        "项目文件夹怎么分：data / sql / dashboard / reports",
+        "SQL 怎么拆销售、地区、产品三条业务线",
+        "Tableau 仪表板怎么只放核心指标，而不是堆图",
+        "分析结果怎么写成一页业务结论"
+      ],
+      "skip": "",
+      "note": "难度和你现在的基础最匹配。先做完这一个，别急着开第二个。"
+    },
+    {
+      "id": "ref-2",
+      "order": 2,
+      "name": "data-analysis-portfolio",
+      "author": "12chaizhi",
+      "url": "https://github.com/12chaizhi/data-analysis-portfolio",
+      "difficulty": "中",
+      "level": 2,
+      "stage": "第二阶段 · 补 SQL 与用户分析",
+      "stack": ["MySQL", "Pandas", "Tableau", "Python"],
+      "why": "国内视角的作品集，电商 SQL 分析、Python 用户分层、A/B 测试都在里面，结构接近你要交出去的样子。",
+      "imitate": [
+        "多表查询与窗口函数：留存、漏斗具体怎么写",
+        "Pandas 数据清洗 + RFM 用户分层",
+        "一个项目怎么组织代码、图表和分析报告",
+        "顺序：先看 01-retail-sql-analysis，再看 02-ecommerce-rfm-python"
+      ],
+      "skip": "不要一次照着做完全部项目，只挑和你路线相关的两个。",
+      "note": "有 GitHub Pages 在线版，可以直接看它最终呈现成什么样。"
+    },
+    {
+      "id": "ref-3",
+      "order": 3,
+      "name": "Ecommerce-Finance-Analytics-Portfolio",
+      "author": "HuzeifKhan",
+      "url": "https://github.com/HuzeifKhan/Ecommerce-Finance-Analytics-Portfolio",
+      "difficulty": "中 — 高",
+      "level": 3,
+      "stage": "第三阶段 · 成品参考，不逐行复刻",
+      "stack": ["SQL", "Python", "Excel", "Tableau"],
+      "why": "把 SQL、Python、Excel、Tableau 串成一条完整链路，还有 RFM、留存和客户价值预测，适合看一个成熟作品长什么样。",
+      "imitate": [
+        "成熟项目的目录结构和报告组织",
+        "KPI 快照、分析报告与仪表板如何互相对应",
+        "多个分析结果怎么整合成一个完整作品"
+      ],
+      "skip": "机器学习预测、自动化报表、部署 —— 投递前都不是必要条件，现在跳过。",
+      "note": "当成品参考：看结构、看叙事，不要逐行复刻。"
+    }
+  ],
+  "mine": [
+    {
+      "id": "m1",
+      "name": "零售经营分析看板",
+      "basedOn": "ref-1",
+      "status": "进行中",
+      "stack": ["Python", "Pandas", "SQL", "Tableau"],
+      "note": "第一个项目。目标两周做完并上线，作为简历第一个项目。",
+      "repo": "https://github.com/Colick-cgc",
+      "deliverables": [
+        { "id": "m1d1", "title": "清洗 notebook（缺失 / 异常 / 重复都有记录）" },
+        { "id": "m1d2", "title": "5 条业务 SQL（趋势、地区、品类、客户、退货）" },
+        { "id": "m1d3", "title": "Tableau 仪表板一页（GMV / 客单价 / 区域贡献 / 品类 Top）" },
+        { "id": "m1d4", "title": "一页结论报告（3 个建议 + 数据支撑）" }
+      ]
+    },
+    {
+      "id": "m2",
+      "name": "电商用户分层与留存",
+      "basedOn": "ref-2",
+      "status": "未开始",
+      "stack": ["MySQL", "Pandas", "Tableau"],
+      "note": "第二个项目。重点是把窗口函数和 RFM 讲清楚，不再做一遍销售看板。",
+      "repo": "",
+      "deliverables": [
+        { "id": "m2d1", "title": "用户行为宽表（多表 JOIN + 窗口函数）" },
+        { "id": "m2d2", "title": "RFM 分层 + 分层运营建议" },
+        { "id": "m2d3", "title": "留存曲线与漏斗图" },
+        { "id": "m2d4", "title": "README 写清口径与结论" }
+      ]
+    },
+    {
+      "id": "m3",
+      "name": "电商 × 财务全流程作品",
+      "basedOn": "ref-3",
+      "status": "未开始",
+      "stack": ["SQL", "Python", "Excel", "Tableau"],
+      "note": "不是必须做。等前两个有反馈了，再决定要不要补这条线。",
+      "repo": "",
+      "deliverables": [
+        { "id": "m3d1", "title": "KPI 快照（收入结构、毛利、退款）" },
+        { "id": "m3d2", "title": "Excel 透视表复核，和 SQL 口径对齐" },
+        { "id": "m3d3", "title": "仪表板与报告互相对应" },
+        { "id": "m3d4", "title": "项目主页（GitHub Pages）" }
+      ]
+    }
+  ]
+}

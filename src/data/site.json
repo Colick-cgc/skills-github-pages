@@ -1,28 +1,26 @@
 {
-  "siteName": "KARMA 的站",
-  "author": "KARMA",
+  "siteName": "KARMA",
+  "author": "陈光灿",
+  "role": "研究生 · 金融数学 / 运筹优化",
   "hero": {
-    "eyebrow": "Bienvenue sur mon site",
-    "tagline": "记录 · 思考 · 生长",
-    "subtitle": "论文研读、随笔日记、读书观影与旅行回忆，一个只属于我的安静角落。"
+    "eyebrow": "RESEARCH · DATA · 求职中",
+    "titleLines": ["把论文读透，", "把数据讲清楚。"],
+    "subtitle": "研究生在读，做低空物流与气象韧性的路径鲁棒优化；同时补 SQL、Pandas、Excel，准备数据分析实习。这里放我的一整套节奏、计划和作品。",
+    "primary": { "label": "学习节奏", "to": "/research" },
+    "secondary": { "label": "实习计划", "to": "/internship" },
+    "facts": [
+      { "label": "在读", "value": "河南大学 · 金融数学" },
+      { "label": "方向", "value": "低空物流 · 鲁棒优化" },
+      { "label": "目标", "value": "数据分析实习" }
+    ]
   },
   "nav": [
     { "label": "首页", "to": "/" },
-    { "label": "论文研读", "to": "/papers" },
-    { "label": "随笔日记", "to": "/journal" },
-    { "label": "读书与观影", "to": "/reading" },
-    { "label": "旅行回忆", "to": "/travel" },
+    { "label": "学习", "to": "/research" },
+    { "label": "实习", "to": "/internship" },
+    { "label": "项目", "to": "/projects" },
+    { "label": "记录", "to": "/records" },
     { "label": "关于", "to": "/about" }
   ],
-  "nowLearning": {
-    "title": "继续学习",
-    "topic": "低空物流 · 气象韧性路径鲁棒优化",
-    "items": [
-      "生成式风场建模（TKE 联合生成 / 保形校准）",
-      "空间相关风场下的路径级 CVaR 鲁棒优化",
-      "陆空联运（厦门三区）路径规划"
-    ],
-    "note": "近期在啃风场不确定性与鲁棒优化的文献，推进比较慢，慢慢来。"
-  },
-  "footer": "Copyright © 2024–2026 KARMA"
+  "footer": "KARMA · 用两周一循环读论文，用十二周准备第一份数据分析实习"
 }

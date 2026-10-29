@@ -10,11 +10,11 @@ export function formatDate(iso) {
   return `${y} 年 ${Number(m)} 月 ${Number(d)} 日`
 }
 
-/** 'YYYY-MM-DD' -> 'YYYY-MM-DD' 的短形式（去掉前导零） */
+/** 'YYYY-MM-DD' -> 'YYYY.MM.DD' 的短形式（补零，方便列表对齐） */
 export function shortDate(iso) {
   if (!iso) return ''
   const [y, m, d] = iso.split('-')
-  return `${y}.${Number(m)}.${Number(d)}`
+  return `${y}.${String(m).padStart(2, '0')}.${String(d).padStart(2, '0')}`
 }
 
 /** 从多条记录中提取不重复标签，按出现次数降序 */

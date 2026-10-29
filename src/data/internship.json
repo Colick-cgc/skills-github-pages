@@ -1,0 +1,203 @@
+{
+  "currentWeek": 1,
+  "positioning": {
+    "target": "数据分析（主）· 运营（备选）",
+    "window": "2026 秋 — 2027 春",
+    "hoursPerWeek": "9–12",
+    "weeks": 12,
+    "summary": "目标很明确：在科研不停的前提下，用 12 周把 SQL、Pandas、Excel 和两个完整项目串起来，第 5 周开始投递，而不是等「全部学完」。"
+  },
+  "readiness": [
+    { "skill": "Excel", "level": 2, "note": "会基本操作和常用函数，数据透视表还没上手" },
+    { "skill": "SQL", "level": 2.5, "note": "学过基础，刷过几天题" },
+    { "skill": "Tableau", "level": 2.5, "note": "学过，能搭简单仪表板" },
+    { "skill": "Python", "level": 1.5, "note": "只有基础语法和简单程序经验" },
+    { "skill": "业务分析", "level": 1, "note": "还没系统做过「问题—分析—结论」" }
+  ],
+  "skills": [
+    { "name": "SQL", "now": 2.5, "target": 4, "note": "多表、窗口函数、留存漏斗 —— 笔试硬通货" },
+    { "name": "Excel", "now": 2, "target": 3.5, "note": "数据透视表 + XLOOKUP，运营岗刚需" },
+    { "name": "Python / Pandas", "now": 1.5, "target": 3, "note": "清洗、groupby、merge，够用就行" },
+    { "name": "Tableau", "now": 2.5, "target": 3.5, "note": "一页讲清核心指标，不堆图" },
+    { "name": "业务分析 / 报告", "now": 1, "target": 3, "note": "结论先写，数据支撑，能听懂的业务话" },
+    { "name": "A/B 测试", "now": 0.5, "target": 2, "note": "知道怎么定指标、怎么看显著性" }
+  ],
+  "phases": [
+    { "key": "p1", "name": "打地基", "weeks": "W1–W3", "focus": "SQL 进阶、Excel 透视表、Pandas 基础", "goal": "能独立写出多表/窗口函数 SQL，用透视表做一个分组汇总，用 Pandas 完成一次清洗。" },
+    { "key": "p2", "name": "出作品", "weeks": "W4–W8", "focus": "项目一做完并上线，第 5 周开始投递", "goal": "一个能讲的项目 > 五门学了一半的课。" },
+    { "key": "p3", "name": "补强与投递", "weeks": "W9–W12", "focus": "项目二、A/B 基础、限时 SQL、面试复盘", "goal": "把投递节奏固定下来，按面试反馈补短板。" }
+  ],
+  "weeks": [
+    {
+      "w": 1,
+      "phase": "打地基",
+      "title": "SQL 多表查询 + 透视表起步",
+      "hours": 9,
+      "tasks": [
+        "SQL：JOIN（内 / 左）、GROUP BY + HAVING，手写 10 条多表查询",
+        "Excel：数据透视表（行 / 列 / 值 / 筛选），用销售数据做 3 张透视",
+        "Pandas：read_csv、缺失值、类型转换、去重"
+      ],
+      "deliverable": "10 条 SQL + 1 个透视表练习 + 1 个清洗 notebook"
+    },
+    {
+      "w": 2,
+      "phase": "打地基",
+      "title": "子查询 / 窗口函数入门 + Pandas 分组",
+      "hours": 9,
+      "tasks": [
+        "SQL：子查询、CTE、ROW_NUMBER / RANK，每天 3 道题",
+        "Excel：透视表分组、计算字段、切片器",
+        "Pandas：groupby + agg、merge 两张表"
+      ],
+      "deliverable": "一个「按客户分组取最新一单」的窗口函数查询"
+    },
+    {
+      "w": 3,
+      "phase": "打地基",
+      "title": "窗口函数进阶 + 时间序列基础",
+      "hours": 10,
+      "tasks": [
+        "SQL：累计求和、同比环比、LAG / LEAD",
+        "Pandas：日期处理、按月 resample 汇总",
+        "Excel：XLOOKUP + 透视表做同比表"
+      ],
+      "deliverable": "一张月度同比环比分析表（SQL 或 Excel 都行）"
+    },
+    {
+      "w": 4,
+      "phase": "出作品",
+      "title": "项目一开工：清洗与业务问题",
+      "hours": 11,
+      "tasks": [
+        "定 3 个业务问题：销售趋势 / 地区差异 / 品类结构",
+        "Pandas 清洗零售数据，把每一步处理写进清洗记录",
+        "画 2 张探索图：月度销售、地区分布"
+      ],
+      "deliverable": "清洗后数据 + 数据字典 + 2 张探索图"
+    },
+    {
+      "w": 5,
+      "phase": "出作品",
+      "title": "项目一：SQL 分析 + 第一个仪表板，开始投递",
+      "hours": 11,
+      "tasks": [
+        "写 5 条业务 SQL（趋势、地区、品类、客户、退货）",
+        "Tableau 仪表板 v1，图不超过 4 张",
+        "简历 v1，本周投 6–8 个岗位"
+      ],
+      "deliverable": "5 条 SQL + 仪表板 v1 + 简历 v1 + 第一批投递"
+    },
+    {
+      "w": 6,
+      "phase": "出作品",
+      "title": "项目一收尾：一页结论",
+      "hours": 9,
+      "tasks": [
+        "写一页结论报告：3 个建议，每个都有数据支撑",
+        "README + 仪表板截图，推到 GitHub",
+        "整理面试能讲的项目故事（问题—做法—结果）"
+      ],
+      "deliverable": "项目一完整上线：代码 + SQL + 截图 + 报告"
+    },
+    {
+      "w": 7,
+      "phase": "出作品",
+      "title": "项目二开工：电商 RFM",
+      "hours": 10,
+      "tasks": [
+        "SQL：多表宽表 + 窗口函数，算出用户首购/末购",
+        "Pandas：RFM 打分与分层",
+        "写分层运营建议（哪些用户该被唤醒）"
+      ],
+      "deliverable": "用户分层表 + RFM 分布图"
+    },
+    {
+      "w": 8,
+      "phase": "出作品",
+      "title": "留存 / 漏斗 + 简历 v2",
+      "hours": 10,
+      "tasks": [
+        "SQL：首购→复购的留存表、漏斗各步转化",
+        "画留存曲线与漏斗图",
+        "简历 v2：每个项目写成「问题—做法—结果」，带上数字"
+      ],
+      "deliverable": "留存/漏斗分析 + 简历 v2"
+    },
+    {
+      "w": 9,
+      "phase": "补强与投递",
+      "title": "A/B 测试 + 限时 SQL",
+      "hours": 9,
+      "tasks": [
+        "A/B 基础：指标定义、样本量直觉、显著性别搞错",
+        "45 分钟限时 SQL 2 套，模拟笔试",
+        "复盘错题类型，列成清单"
+      ],
+      "deliverable": "A/B 一页笔记 + 2 套限时 SQL 成绩"
+    },
+    {
+      "w": 10,
+      "phase": "补强与投递",
+      "title": "项目二收尾 + 作品集页",
+      "hours": 10,
+      "tasks": [
+        "图表定稿、README 补齐口径说明",
+        "把两个项目整理成一个作品集页面（GitHub Pages）",
+        "投递节奏保持：每周 6–8 个"
+      ],
+      "deliverable": "项目二上线 + 作品集页面"
+    },
+    {
+      "w": 11,
+      "phase": "补强与投递",
+      "title": "查漏补缺 + 模拟面试",
+      "hours": 9,
+      "tasks": [
+        "按投递反馈补短板：Excel 函数 / SQL 优化 / 业务指标",
+        "模拟面试 1 次：自我介绍 + 项目追问 + 反问",
+        "把被问到答不上来的问题记下来"
+      ],
+      "deliverable": "高频问题清单 + 一版逐字稿"
+    },
+    {
+      "w": 12,
+      "phase": "补强与投递",
+      "title": "复盘与固化",
+      "hours": 9,
+      "tasks": [
+        "技能自评，对照目标看差在哪",
+        "简历终版，固定投递节奏（每周 6–8 个）",
+        "把 12 周里最有效的学习方式写成一篇复盘"
+      ],
+      "deliverable": "简历终版 + 复盘笔记"
+    }
+  ],
+  "rhythm": [
+    { "day": "周一", "task": "SQL 刷题 3 道", "minutes": 60, "kind": "SQL" },
+    { "day": "周二", "task": "Pandas 练习（用项目数据）", "minutes": 60, "kind": "Python" },
+    { "day": "周三", "task": "项目推进：清洗 / 分析", "minutes": 60, "kind": "项目" },
+    { "day": "周四", "task": "Excel 透视表 / 函数", "minutes": 60, "kind": "Excel" },
+    { "day": "周五", "task": "轻量复盘：整理笔记 + 错题", "minutes": 45, "kind": "复盘" },
+    { "day": "周六", "task": "项目主攻：写代码 + 出图", "minutes": 150, "kind": "项目" },
+    { "day": "周日", "task": "报告 / 简历 / 投递 + 下周计划", "minutes": 120, "kind": "投递" }
+  ],
+  "applications": {
+    "startWeek": 5,
+    "cadence": "每周 6–8 个岗位，宁少勿滥",
+    "steps": [
+      { "name": "投递", "desc": "岗位 JD 里的关键词，对照简历逐条确认；不缺的不投。" },
+      { "name": "笔试 / 作业", "desc": "SQL 限时 + Excel 案例，平时按 45 分钟练。" },
+      { "name": "面试", "desc": "项目追问最多，准备好「为什么这么做」而不是「做了什么」。" },
+      { "name": "复盘", "desc": "每场面完当天记三个问题：答得好的、答崩的、下次怎么答。" }
+    ]
+  },
+  "rules": [
+    { "id": "r1", "title": "不同时开两个项目", "text": "第一个没上线，不碰第二个。" },
+    { "id": "r2", "title": "不追整套课程", "text": "缺什么补什么，用不上的章节直接跳。" },
+    { "id": "r3", "title": "不为了刷题而刷题", "text": "每天 20–30 分钟，保持手感；堆量不如复盘错题。" },
+    { "id": "r4", "title": "不熬夜补进度", "text": "一周超过 12 小时就砍任务，先砍项目外的学习。" },
+    { "id": "r5", "title": "不追求完美仪表板", "text": "能讲清 3 个业务结论就可以交，迭代留给下一版。" },
+    { "id": "r6", "title": "简历不等「准备好了」", "text": "第 5 周就投出去，用反馈改，而不是闭门造车。" }
+  ]
+}

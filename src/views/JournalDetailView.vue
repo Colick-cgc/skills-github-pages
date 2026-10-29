@@ -1,7 +1,6 @@
 <script setup>
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
-import { motion } from 'motion-v'
 import TagBadge from '@/components/TagBadge.vue'
 import { formatDate } from '@/utils/format.js'
 import { asset } from '@/utils/asset.js'
@@ -15,21 +14,21 @@ const paragraphs = computed(() => (entry.value?.content || '').split('\n\n').fil
 
 <template>
   <!-- 长文阅读模式：窄栏、背景柔和、减少干扰 -->
-  <article class="mx-auto max-w-2xl px-6 pb-24 pt-28 sm:pt-32">
+  <article class="mx-auto max-w-2xl px-5 pb-24 pt-28 sm:px-8 sm:pt-36">
     <router-link
       to="/journal"
-      class="inline-flex items-center gap-1.5 text-sm text-secondary transition hover:text-primary"
+      class="mono inline-flex items-center gap-1.5 text-[11px] text-secondary transition hover:text-accent"
     >
       ← 返回随笔
     </router-link>
 
     <template v-if="entry">
-      <header class="mt-8">
-        <div class="flex items-center gap-3 text-sm text-muted">
+      <header class="mt-8 border-b border-border pb-8">
+        <div class="mono flex items-center gap-3 text-[10.5px] text-muted">
           <time>{{ formatDate(entry.date) }}</time>
           <span v-if="entry.mood">· {{ entry.mood }}</span>
         </div>
-        <h1 class="mt-3 text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">
+        <h1 class="mt-4 text-[clamp(1.8rem,4vw,2.6rem)] font-semibold leading-[1.2] tracking-tight">
           {{ entry.title }}
         </h1>
         <div v-if="entry.tags && entry.tags.length" class="mt-5 flex flex-wrap gap-2">
@@ -42,17 +41,13 @@ const paragraphs = computed(() => (entry.value?.content || '').split('\n\n').fil
       </div>
 
       <div class="mt-10 flex flex-col gap-6">
-        <motion.p
+        <p
           v-for="(p, i) in paragraphs"
           :key="i"
-          :initial="{ opacity: 0, y: 12 }"
-          :while-in-view="{ opacity: 1, y: 0 }"
-          :viewport="{ once: true, amount: 0.3 }"
-          :transition="{ duration: 0.5, delay: Math.min(i, 5) * 0.08, ease: [0.22, 1, 0.36, 1] }"
-          class="text-[17px] leading-[1.85] text-primary"
+          class="text-[16.5px] leading-[1.95] text-primary/95"
         >
           {{ p }}
-        </motion.p>
+        </p>
       </div>
     </template>
 

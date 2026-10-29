@@ -1,12 +1,10 @@
 <script setup>
 import { ref, computed } from 'vue'
-import { motion } from 'motion-v'
+import Reveal from '@/components/Reveal.vue'
 import SectionHeader from '@/components/SectionHeader.vue'
 import TagBadge from '@/components/TagBadge.vue'
 import { shortDate, collectTags } from '@/utils/format.js'
 import journal from '@/data/journal.json'
-
-const easing = [0.22, 1, 0.36, 1]
 
 const selectedTags = ref([])
 const allTags = computed(() => collectTags(journal))
@@ -38,19 +36,14 @@ function toggleTag(t) {
 </script>
 
 <template>
-  <div class="mx-auto max-w-3xl px-6 pb-24 pt-28 sm:pt-32">
+  <div class="mx-auto max-w-3xl px-5 pb-24 pt-28 sm:px-8 sm:pt-36">
     <SectionHeader
       eyebrow="Journal"
       title="随笔日记"
-      subtitle="私人日常、情绪与生活碎片。没有分享按钮，只有自己。"
+      lead="私人日常、情绪与生活碎片。没有分享按钮，只有自己。"
     />
 
-    <div class="mt-6 flex justify-end">
-      <router-link to="/admin?new=journal" class="pill-btn">＋ 写日记</router-link>
-    </div>
-
-    <!-- 标签筛选 -->
-    <div v-if="allTags.length" class="mt-8 flex flex-wrap gap-2">
+    <div class="mt-8 flex flex-wrap items-center gap-2">
       <button
         v-for="t in allTags"
         :key="t"
@@ -67,41 +60,30 @@ function toggleTag(t) {
       >
         清除筛选
       </button>
+      <router-link to="/admin?new=journal" class="chip ml-auto is-active no-print">＋ 写日记</router-link>
     </div>
 
     <!-- 按年归档 -->
-    <div v-for="[year, entries] in grouped" :key="year" class="mt-12">
-      <motion.p
-        :initial="{ opacity: 0 }"
-        :while-in-view="{ opacity: 1 }"
-        :viewport="{ once: true }"
-        :transition="{ duration: 0.6, ease: easing }"
-        class="text-sm font-semibold tracking-wide text-muted"
-      >
-        {{ year }}
-      </motion.p>
+    <div v-for="[year, entries] in grouped" :key="year" class="mt-14">
+      <div class="flex items-baseline gap-3 border-b border-border pb-3">
+        <span class="mono text-[12px] text-secondary">{{ year }}</span>
+        <span class="mono text-[10px] text-muted">{{ entries.length }} 篇</span>
+      </div>
 
-      <div class="mt-4 flex flex-col gap-4">
-        <motion.div
-          v-for="(j, i) in entries"
-          :key="j.id"
-          :initial="{ opacity: 0, y: 20 }"
-          :while-in-view="{ opacity: 1, y: 0 }"
-          :viewport="{ once: true, amount: 0.1 }"
-          :transition="{ duration: 0.5, delay: Math.min(i, 8) * 0.05, ease: easing }"
-        >
+      <div class="mt-5 flex flex-col gap-3">
+        <Reveal v-for="(j, i) in entries" :key="j.id" :delay="Math.min(i, 8) * 0.04">
           <router-link :to="`/journal/${j.id}`" class="card block p-5">
             <div class="flex items-center gap-3">
-              <time class="text-sm font-medium text-accent">{{ shortDate(j.date) }}</time>
-              <span v-if="j.mood" class="text-xs text-muted">{{ j.mood }}</span>
+              <time class="mono text-[10.5px] text-accent">{{ shortDate(j.date) }}</time>
+              <span v-if="j.mood" class="mono text-[10px] text-muted">{{ j.mood }}</span>
             </div>
-            <h2 class="mt-2 text-lg font-semibold tracking-tight">{{ j.title }}</h2>
-            <p class="mt-2 line-clamp-2 text-sm text-secondary">{{ j.summary }}</p>
-            <div v-if="j.tags && j.tags.length" class="mt-4 flex flex-wrap gap-2">
+            <h2 class="mt-2.5 text-[15.5px] font-semibold tracking-tight">{{ j.title }}</h2>
+            <p class="mt-2 line-clamp-2 text-[12.5px] leading-relaxed text-secondary">{{ j.summary }}</p>
+            <div v-if="j.tags && j.tags.length" class="mt-3.5 flex flex-wrap gap-1.5">
               <TagBadge v-for="t in j.tags" :key="t" :label="t" />
             </div>
           </router-link>
-        </motion.div>
+        </Reveal>
       </div>
     </div>
 

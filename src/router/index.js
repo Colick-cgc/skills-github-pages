@@ -1,16 +1,38 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
 
-// 使用 hash 路由（地址形如 /#/papers）：
+// 使用 hash 路由（地址形如 /#/research）：
 // GitHub Pages 是静态托管，无法为任意路径返回 index.html，
 // hash 路由不需要服务端配置，刷新 / 直接打开深层链接都不会 404。
 const routes = [
   { path: '/', name: 'home', component: HomeView, meta: { title: '首页' } },
+
+  // 三个主板块
   {
-    path: '/papers',
-    name: 'papers',
-    component: () => import('@/views/PapersView.vue'),
-    meta: { title: '论文研读' },
+    path: '/research',
+    name: 'research',
+    component: () => import('@/views/ResearchView.vue'),
+    meta: { title: '日常学习' },
+  },
+  {
+    path: '/internship',
+    name: 'internship',
+    component: () => import('@/views/InternshipView.vue'),
+    meta: { title: '实习计划' },
+  },
+  {
+    path: '/projects',
+    name: 'projects',
+    component: () => import('@/views/ProjectsView.vue'),
+    meta: { title: '项目展示' },
+  },
+
+  // 生活记录
+  {
+    path: '/records',
+    name: 'records',
+    component: () => import('@/views/RecordsView.vue'),
+    meta: { title: '记录' },
   },
   {
     path: '/journal',
@@ -48,6 +70,7 @@ const routes = [
     component: () => import('@/views/TravelDetailView.vue'),
     meta: { title: '旅行' },
   },
+
   {
     path: '/about',
     name: 'about',
@@ -60,6 +83,10 @@ const routes = [
     component: () => import('@/views/AdminView.vue'),
     meta: { title: '内容管理' },
   },
+
+  // 旧链接：论文研读并入「日常学习」
+  { path: '/papers', redirect: '/research' },
+
   // 未知路径一律回首页
   { path: '/:pathMatch(.*)*', redirect: '/' },
 ]
@@ -74,7 +101,7 @@ const router = createRouter({
 })
 
 router.afterEach((to) => {
-  document.title = to.meta.title ? `${to.meta.title} · KARMA 的站` : 'KARMA 的站'
+  document.title = to.meta.title ? `${to.meta.title} · KARMA` : 'KARMA'
 })
 
 export default router
