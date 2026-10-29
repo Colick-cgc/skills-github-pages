@@ -1,6 +1,6 @@
 import { ref } from 'vue'
 
-const THEME_KEY = 'karma-theme'
+const THEME_KEY = 'karma-theme-v2'
 
 // 亮色为默认（个人学习站，白天看更舒服）。模块级 ref，全局共享同一个状态。
 const isDark = ref(false)
