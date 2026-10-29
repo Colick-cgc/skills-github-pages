@@ -1,0 +1,1 @@
+function e(e){return e?/^(https?:|data:|\/\/)/.test(e)?e:`/skills-github-pages/`+String(e).replace(/^\//,``):``}export{e as t};

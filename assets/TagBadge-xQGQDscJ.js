@@ -1,0 +1,1 @@
+import{D as e,H as t,M as n,W as r}from"./index-BzYy7pSm.js";var i={__name:`TagBadge`,props:{label:{type:String,required:!0},active:{type:Boolean,default:!1}},setup(i){return(a,o)=>(n(),e(`span`,{class:t([`chip`,{"is-active":i.active}])},r(i.label),3))}};export{i as t};
